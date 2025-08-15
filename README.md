@@ -23,3 +23,5 @@ DISCRIPTION: THIS IS A CHROME EXTENSION WEB APPLICATION USE TO MONITOR THE USAGE
                       OR 
              STEP 6: GOTO EXTENSION FOLDER AND OPEN POPUP.HTML     -IT WILL OPEN EXTENSION FOLDER
              HERE YOU CAN SEE ALL WEBSITES WHICH YOU HAD SPENT TIME INIT.
+
+OUTPUT:<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/2f85987e-fa7d-408a-beb0-5dd647bd1ec3" />             
