@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productivity Report</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h2>Weekly Productivity Report</h2>
+  <canvas id="productivityChart" width="400" height="200"></canvas>
+
+  <script>
+    fetch('http://localhost:5000/api/report')
+      .then(res => res.json())
+      .then(data => {
+        const ctx = document.getElementById('productivityChart').getContext('2d');
+        const chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Productive', 'Unproductive', 'Others'],
+            datasets: [{
+              label: 'Time Spent (ms)',
+              data: [data.productive, data.unproductive, data.others],
+              backgroundColor: ['green', 'red', 'gray']
+            }]
+          }
+        });
+      });
+  </script>
+</body>
+</html>
