@@ -1,0 +1,26 @@
+const productiveSites = [
+  "leetcode.com",
+  "github.com",
+  "stackoverflow.com",
+  "w3schools.com"
+];
+
+const unproductiveSites = [
+  "facebook.com",
+  "instagram.com",
+  "youtube.com",
+  "netflix.com"
+];
+
+function normalizeHostname(hostname) {
+  return hostname.replace(/^www\./, '').split('.').slice(-2).join('.');
+}
+
+function classifySite(hostname) {
+  const base = normalizeHostname(hostname);
+  if (productiveSites.includes(base)) return 'productive';
+  if (unproductiveSites.includes(base)) return 'unproductive';
+  return 'others';
+}
+
+module.exports = classifySite;
