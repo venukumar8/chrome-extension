@@ -26,3 +26,4 @@ function logTime(tab, duration) {
     body: JSON.stringify({ hostname, duration })
   });
 }
+
